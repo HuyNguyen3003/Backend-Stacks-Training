@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "fd8eeb63-daf9-4fcd-8095-0b5cfc32a53b",
+		"name": "Test BT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19150968"
+	},
+	"item": [
+		{
+			"name": "post data search từ client",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Title\":\"How to index data in Elasticsearchaa 1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2000/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post data sang kibana",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Timestamp\": \"2023-03-10T14:30:00Z\",\r\n  \"Title\": \"How to index data in Elasticsearchaa\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/datames/_doc/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"datames",
+						"_doc",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get data từ elastic",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/datames/_search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"datames",
+						"_search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cacheData",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2001/key/value",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2001",
+					"path": [
+						"key",
+						"value"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
