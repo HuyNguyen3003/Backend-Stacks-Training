@@ -1,5 +1,5 @@
 # Backend-Stacks-Training
-+ https://docs.google.com/document/d/1x2hTopqi6PEDPLG-5vs-YTVZelKUEjB04zhtSZunpxo/edit
++ Đề bài: https://docs.google.com/document/d/1x2hTopqi6PEDPLG-5vs-YTVZelKUEjB04zhtSZunpxo/edit
 
 + Ưu điểm:
 
