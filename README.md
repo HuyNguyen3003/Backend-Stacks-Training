@@ -11,4 +11,4 @@
 -------------------------------------------
 + Hạn chế : 
 + Viết test chưa đúng yêu cầu
-+ Thiếu swagger, api, docker-compose mongodb, server, worker
++ Thiếu: swagger, api get data cache, docker-compose mongodb server worker
