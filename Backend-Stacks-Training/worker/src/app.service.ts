@@ -11,5 +11,13 @@ export class AppService {
     const cachedItem = await this.cacheManager.get(key);
     console.log(cachedItem);
     return 'done';
+  
+  }
+  async getkey(key) {
+
+    const cachedItem = await this.cacheManager.get(key);
+    console.log(cachedItem);
+    return `${cachedItem}`;
+    
   }
 }

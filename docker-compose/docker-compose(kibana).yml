@@ -1,7 +1,0 @@
-version: "3.9"
-
-services:
-  kibana:
-    image: docker.elastic.co/kibana/kibana:7.5.2
-    ports:
-      - "5601:5601"

@@ -39,31 +39,28 @@ export class ReadMessageChannel {
         console.log('Message read: ', product);
         const _id = crypto.randomBytes(20).toString('hex');
 
-        const response = await axios.put(
-          `http://localhost:9200/datames/_doc/${_id}`,
-          product,
-        );
+        await axios.put(`http://localhost:9200/datames/_doc/${_id}`, product);
 
         const url = 'http://localhost:9200/datames/_search';
         const data = {
           query: {
             match_phrase: {
               Title: {
-                query: `${product.Title}`,
-                slop: 1,
+                query: 'abc ', // msg can tim
+                slop: '1',
               },
             },
           },
           _source: 'Title',
         };
 
-        axios
+        await axios
           .post(url, data)
           .then((response) => {
-            // console.log(response.data.hits.hits);
             const stringtitle = response.data.hits.hits
               .map((item) => item._source.Title)
               .join(', ');
+
             axios.get(`http://localhost:2001/dataSearch/${stringtitle}`);
           })
           .catch((error) => {

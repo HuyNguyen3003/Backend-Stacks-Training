@@ -10,6 +10,10 @@ export class AppController {
     @Param('key') key: string,
     @Param('value') value: string,
   ): Promise<string> {
-    return this.appService.getHello(key, value);
+    return this.appService.getHello(key, value) ;
+  }
+  @Get(':key')
+  async getkey(@Param('key') key: string): Promise<string> {
+    return this.appService.getkey(key);
   }
 }
